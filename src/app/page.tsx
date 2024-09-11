@@ -8,9 +8,6 @@ export default function Home() {
           <li>
             <Link href="/media-query">Media Query</Link>
           </li>
-          <li>
-            <Link href="/container-query">Container Query</Link>
-          </li>
         </ul>
       </nav>
     </main>
