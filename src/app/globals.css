@@ -1,3 +1,95 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    height: 200vh;
+}
+
+.main {
+    container-type: inline-size;
+    container-name: main;
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.fv {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 250px 0;
+
+
+    .title {
+        font-size: 90px;
+        font-weight: 700;
+        color: #74cfae;
+    }
+
+    .sub-title {
+        font-size: 30px;
+        color: #c0c0c0;
+    }
+}
+
+.what-we-can-do {
+    color: white;
+    padding-top: 50px;
+    background-color: #74cfae;
+    text-align: center;
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        place-content: center;
+        place-items: center;
+    }
+
+    .content {
+        width: 100%;
+        container-type: inline-size;
+        container-name: content;
+        resize: horizontal;
+        overflow: auto;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .description {
+        font-size: 20px;
+        margin-top: 30px;
+
+    }
+}
+
+/* @media screen and (max-width: 768px) {
+    .wrapper {
+        max-width: 97%;
+    }
+} */
+/* サポートしていない場合 */
+@supports not (container-type: inline-size) {
+    @media screen and (max-width: 768px) {
+        .wrapper {
+            max-width: 97%;
+        }
+    }
+}
+
+@supports (container-type: inline-size) {
+    /* mainコンテナーに対してのスタイル */
+    @container main (max-width: 768px) {
+        .wrapper {
+            max-width: 97%;
+        }
+    }
+    @container content (max-width: 500px) {
+        .description {
+            background-color: orange;
+        }
+    }
+}
