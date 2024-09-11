@@ -1,3 +1,61 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.main {
+    background-color: #f2f2f2;
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.fv {
+    text-align: center;
+    padding: 250px 0;
+
+    .title {
+        font-size: 90px;
+        font-weight: 700;
+        color: #74cfae;
+        line-height: 1;
+    }
+
+    .sub-title {
+        font-size: 30px;
+        color: #c0c0c0;
+        margin-top: 20px;
+    }
+}
+
+.what-we-can-do {
+    background-color: #74cfae;
+    padding-top: 50px;
+    text-align: center;
+    
+    .wrapper {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        place-content: center;
+        place-items: center;
+    }
+
+    .title {
+        font-size: 24px;
+        color: #fff;
+    }
+    
+    .description {
+        font-size: 20px;
+        font-weight: 300;
+        color: #fff;
+        line-height: 1.5;
+        margin-top: 35px;
+    }
+
+    .content {
+        display: grid;
+    }
+
+}
